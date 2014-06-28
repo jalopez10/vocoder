@@ -1,0 +1,10 @@
+
+about:
+Zerious vocoder autotools package
+
+Instructions:
+1. Go to src/
+2. Run <./autogen.sh>
+3. Run <make> to build
+4. Run <[sudo] make install> to install
+
