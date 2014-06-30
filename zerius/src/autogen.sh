@@ -4,11 +4,13 @@ aclocal
 autoheader
 autoconf
 
+libtoolize
 automake --add-missing
 ./configure
 
 echo ""
-echo "zerius"
-echo "---------------------------------------------"
+echo "zerius build & install "
+echo "-------------------------"
+echo "Linux:"
 echo "Build: <make>"
-echo "install: <make install>"
+echo "install: <[sudo] make install>"
