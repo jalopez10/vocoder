@@ -1,9 +1,15 @@
 
-about:
-Zerius vocoder autotools package
+About: 
+Emanuel Borsboom's Zerius vocoder 1.3 Autotools package
+
+Description:
+This package makes use of Autotools to build and distribute the Zerius
+vocoder software. The vocoder source code is compiled as library using 
+Libtool, applications such as the tester provided, links against it to 
+keep the software library and client-side software separated.
 
 Instructions:
-1. Go to src/
+1. Go to zerius/src/
 2. Run <./autogen.sh>
 3. Run <make> to build
 4. Run <[sudo] make install> to install
