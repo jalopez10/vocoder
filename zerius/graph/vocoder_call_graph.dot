@@ -1,0 +1,26 @@
+digraph {
+	graph [fontname=Arial, nodesep=0.125, ranksep=0.25];
+	node [fontcolor=white, fontname=Arial, height=0, shape=box, style=filled, width=0];
+	edge [fontname=Arial];
+	1 [color="#8bcd07", fontcolor="#ffffff", fontsize="10.00", label="main\n66.67%\n(0.00%)\n1×"];
+	1 -> 3 [arrowsize="0.82", color="#8bcd07", fontcolor="#8bcd07", fontsize="10.00", label="66.66%\n1×", labeldistance="2.67", penwidth="2.67"];
+	2 [color="#8bcd07", fontcolor="#ffffff", fontsize="10.00", label="__libc_start_main\n66.67%\n(0.00%)"];
+	2 -> 1 [arrowsize="0.82", color="#8bcd07", fontcolor="#8bcd07", fontsize="10.00", label="66.67%\n1×", labeldistance="2.67", penwidth="2.67"];
+	3 [color="#8bcd07", fontcolor="#ffffff", fontsize="10.00", label="vocode\n66.66%\n(0.00%)\n1×"];
+	3 -> 4 [arrowsize="0.82", color="#8bcd07", fontcolor="#8bcd07", fontsize="10.00", label="66.66%\n1×", labeldistance="2.67", penwidth="2.67"];
+	4 [color="#8bcd07", fontcolor="#ffffff", fontsize="10.00", label="vocoder\n66.66%\n(0.00%)\n1×"];
+	4 -> 7 [arrowsize="0.58", color="#0b9f6e", fontcolor="#0b9f6e", fontsize="10.00", label="33.33%\n49×", labeldistance="1.33", penwidth="1.33"];
+	4 -> 10 [arrowsize="0.41", color="#0c5f88", fontcolor="#0c5f88", fontsize="10.00", label="16.67%\n50×", labeldistance="0.67", penwidth="0.67"];
+	4 -> 11 [arrowsize="0.41", color="#0c5f88", fontcolor="#0c5f88", fontsize="10.00", label="16.67%\n49×", labeldistance="0.67", penwidth="0.67"];
+	5 [color="#0b9f6e", fontcolor="#ffffff", fontsize="10.00", label="wave_read_short_little\n33.33%\n(33.33%)\n98358×"];
+	6 [color="#0b9f6e", fontcolor="#ffffff", fontsize="10.00", label="invfft\n33.33%\n(33.33%)\n49×"];
+	7 [color="#0b9f6e", fontcolor="#ffffff", fontsize="10.00", label="vocode_window\n33.33%\n(0.00%)\n49×"];
+	7 -> 6 [arrowsize="0.58", color="#0b9f6e", fontcolor="#0b9f6e", fontsize="10.00", label="33.33%\n49×", labeldistance="1.33", penwidth="1.33"];
+	8 [color="#0b9f6e", fontcolor="#ffffff", fontsize="10.00", label="__dubcos\n33.33%\n(33.33%)"];
+	9 [color="#0b9f6e", fontcolor="#ffffff", fontsize="10.00", label="wave_read\n33.33%\n(0.00%)\n100×"];
+	9 -> 5 [arrowsize="0.58", color="#0b9f6e", fontcolor="#0b9f6e", fontsize="10.00", label="33.33%\n98350×", labeldistance="1.33", penwidth="1.33"];
+	10 [color="#0c5f88", fontcolor="#ffffff", fontsize="10.00", label="read_zero\n16.67%\n(0.00%)\n50×"];
+	10 -> 9 [arrowsize="0.41", color="#0c5f88", fontcolor="#0c5f88", fontsize="10.00", label="16.67%\n50×", labeldistance="0.67", penwidth="0.67"];
+	11 [color="#0c5f88", fontcolor="#ffffff", fontsize="10.00", label="loop\n16.67%\n(0.00%)\n49×"];
+	11 -> 9 [arrowsize="0.41", color="#0c5f88", fontcolor="#0c5f88", fontsize="10.00", label="16.67%\n50×", labeldistance="0.67", penwidth="0.67"];
+}
