@@ -5,6 +5,14 @@
  * that all copies contain this notice and an indication of what has been
  * changed.
  *****************************************************************************/
+/******************************************************************************
+ * Modifier:
+ * Jose Lopez - ja.lopezm10@gmail.com
+ * 
+ * Changelog:
+ * June 23 2015 - Add simple vocoder/plugin interface
+ * 
+ *****************************************************************************/
 
 #include <stdio.h>
 #include <math.h>
@@ -323,4 +331,44 @@ void vocode(void)
   fft_create_arrays (&fft_c, &fft_s, &fft_rev, vocode_window_length);
   vocoder();
   vocode_cleanup();
+}
+
+//Vocoder/plug-in interface
+
+int vocode_set_property () {
+
+	return 0;
+}
+
+int vocode_get_property () {
+
+	return 0;
+}
+
+int vocode_init () {
+
+	//FIX or move
+  //vocode_start_status_cb = start_status;
+  //vocode_update_status_cb = update_status;
+  //vocode_finish_status_cb = finish_status;
+  //error_display_cb = display_error;
+
+  allocate_memory();
+  fft_create_arrays (&fft_c, &fft_s, &fft_rev, vocode_window_length);
+
+	return 0;
+}
+
+int vocode_process (void *inbuf, void *outbuf) {
+
+	vocoder(); // <<--hack here, something like: vocoder(void *inbuf, void *outbuf);
+	free_memory();
+
+	return 0;
+}
+
+int vocode_fini () {
+
+	free_memory();
+	return 0;
 }
